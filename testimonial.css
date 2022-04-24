@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: #8bd;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.container h1{
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: normal;
+    color: rgb(56, 35, 243);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container h1::after{
+    content: '';
+    width: 90px;
+    height: 5px;
+    background-color: rgb(56, 35, 243);
+    display: inline-block;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container .slider{
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+}
+.slider .box{
+    width: calc(100% - 600px);
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.box .test{
+    width: 400px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.test i{
+    color: rgb(56, 35, 243);
+    font-size: 30px;
+    margin: 10px 20px;
+}
+.test p{
+    width: 100%;
+    font-size: 16px;
+    padding: 20px 25px 20px 20px;
+    user-select: none;
+}
+.test .user{
+    display: flex;
+}
+
+.user .image{
+    width: 60px;
+    height: 60px;border-radius: 50%;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.user .name{
+    display: flex;
+    flex-direction: column;
+}
+.name h3{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+    cursor: pointer;
+}
+.name span{
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #6b6b6b;
+    user-select: none;
+}
+.box .black{
+    width: 400px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 500px;
+    /* top: 0; */
+    left: 0;
+    border-radius: 10px;
+    transition: .5s;
+}
+.black .user{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.black .user .image{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+.black .user .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.black .user .name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.black .user .name h3{
+    font-size: 23px;
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 5px;
+}
+.black .user .name span{
+    font-size: 16px;
+    color: black;
+}
+.black .user .star{
+    display: flex;
+}
+.black .user .star i{
+    margin: 10px 10px;
+    color: #FFDF00;
+    font-size: 25px;
+}
+.black .user i{
+    align-self: flex-start;
+    margin: 20px 0 10px 30px;
+    font-size: 20px;
+    color: rgb(56, 35, 243);
+}
+.black .user p{
+    color: #fff;
+    opacity: .8;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 20px;
+}
+
+.test:hover .black{
+    top: 0;
+}
+
+*::selection{
+    background: #c20ac9;
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:linear-gradient(#141414, #131414);
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem 7%;
+    padding-top:6rem;
+}
+
+
+.heading{
+    color:#444;
+    padding:1rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:1.5rem 7%;
+    background:var(--gradient);
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+}
+
+header .logo{
+    color:#fff;
+    font-size: 2.5rem;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin:0 1rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color:#fff;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color:#444;
+}
+
+header #login{
+    font-size: 3rem;
+    color:#fff;
+    cursor: pointer;
+}
+
+header #login:hover{
+    color:#444;
+}
+
+header #menu{
+    font-size: 3rem;
+    color:#fff;
+    cursor: pointer;
+    display: none;
+}
+:root{
+    --gradient:linear-gradient(90deg, #f1c40f, #f312ce);
+}
